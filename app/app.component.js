@@ -1,4 +1,4 @@
-System.register(['angular2/core', './courses.component', './about.component'], function(exports_1, context_1) {
+System.register(['angular2/core', './courses.component', './about.component', './fav.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', './courses.component', './about.component'], f
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, courses_component_1, about_component_1;
+    var core_1, courses_component_1, about_component_1, fav_component_1;
     var AppComponent;
     return {
         setters:[
@@ -22,16 +22,26 @@ System.register(['angular2/core', './courses.component', './about.component'], f
             },
             function (about_component_1_1) {
                 about_component_1 = about_component_1_1;
+            },
+            function (fav_component_1_1) {
+                fav_component_1 = fav_component_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
                 function AppComponent() {
+                    this.post = {
+                        title: 'Title',
+                        isFavorite: true
+                    };
                 }
+                AppComponent.prototype.onFavoriteChang = function ($event) {
+                    console.log($event);
+                };
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        template: "<h1>We Hear to help You</h1>\n    <courses></courses>\n<about></about>\n    ",
-                        directives: [courses_component_1.CoursesComponent, about_component_1.AboutComponent]
+                        template: "\n    <i class=\"glyphicon glyphicon-star\"></i>\n    <favorite [isFavorite]=\"post.isFavorite\" (chang)=\"onFavoriteChang($event)\"></favorite>\n    ",
+                        directives: [courses_component_1.CoursesComponent, about_component_1.AboutComponent, fav_component_1.FavoriteComponent]
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);

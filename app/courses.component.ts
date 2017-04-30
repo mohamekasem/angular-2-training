@@ -3,7 +3,7 @@ import {CourseService} from './courses.service';
 import {AutoGrowDirective}from './auto-grow.directive'
 @Component({
 	selector: 'courses',
-	template: `<h1>Welcome Visertour</h1>
+	template: `<h1>Welcome Visitors</h1>
 	{{titel}}
 	<input type="text" autoGrow />
 	<ul>

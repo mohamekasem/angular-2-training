@@ -4,7 +4,7 @@ import {AboutService} from './about.service'
 @Component({
 	selector: 'about',
 	template: `<hr />
-	<h2>hello ther we  will let you know more about us</h2>
+	<h2>About us</h2>
 <ul>
 <li *ngFor="#about of info">
 {{about}}

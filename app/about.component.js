@@ -28,7 +28,7 @@ System.register(['angular2/core', './about.service'], function(exports_1, contex
                 AboutComponent = __decorate([
                     core_1.Component({
                         selector: 'about',
-                        template: "<hr />\n\t<h2>hello ther we  will let you know more about us</h2>\n<ul>\n<li *ngFor=\"#about of info\">\n{{about}}\n</li>\n</ul>\n\t",
+                        template: "<hr />\n\t<h2>About us</h2>\n<ul>\n<li *ngFor=\"#about of info\">\n{{about}}\n</li>\n</ul>\n\t",
                         providers: [about_service_1.AboutService]
                     }), 
                     __metadata('design:paramtypes', [about_service_1.AboutService])
